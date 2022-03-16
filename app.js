@@ -84,18 +84,21 @@ function resetAll (){
         computerScoreDisplay.innerHTML = computerScore
 }
 function checkForWinner(){
-    if (userScore === targetScore){
+    if (userScore === parseInt(targetScore)){
         prompt ("User Wins the game")
+        console.log("it has reached")
         resetAll()
     }
 
-    if (computerScore === targetScore){
+    if (computerScore === parseInt(targetScore)){
         prompt ("Computer wins the game")
+        console.log("it has reached")
         resetAll()
     }
 
     if (!targetScore){
        targetScore = prompt ("Set the winning score")
+       console.log(targetScore)
     }
 }
 
